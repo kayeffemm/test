@@ -1,14 +1,41 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Video</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bleach Ichigo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      background: black;
+    }
+
+    .background {
+      background: url('kurosaki_ichigo_png_by_aadunis_dfuvp9g-fullview.png') no-repeat center center;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
+  <div class="background" onclick="playMusic()"></div>
 
-<audio controls autoplay loop>
-    <source src="Bleach.mp3" type="audio/mpeg">
-    Dein Browser unterstützt dieses Audioformat nicht.
-</audio>
+  <audio id="bg-audio" src="Bleach.mp3"></audio>
 
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('bg-audio');
+      audio.play();
+    }
+  </script>
 </body>
 </html>
